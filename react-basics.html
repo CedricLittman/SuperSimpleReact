@@ -10,9 +10,18 @@
     <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
 
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+
     <script type="text/babel">
       const container = document.querySelector('.js-container');
-      ReactDOM.createRoot(container).render('Welcome to SuperSimpleDev React Course');
+      const output = (
+       <div>
+        <h1>Hello, React!</h1>
+        <button>Click Me</button>
+        <p>This is a simple React example.</p>
+      </div>
+    );
+
+      ReactDOM.createRoot(container).render(output);
     </script>
   </body>
 </html>
