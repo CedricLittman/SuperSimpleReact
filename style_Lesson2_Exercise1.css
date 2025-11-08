@@ -6,3 +6,10 @@
         height: 100vh;               /* full viewport height */
         flex-direction: column;      /* stack items vertically */
 }
+
+.button-group {
+    display: flex;
+    display-direction: row;
+    gap: 10px;                   /* space between buttons */
+    margin-bottom: 20px;
+}
