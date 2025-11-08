@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+    <link rel = "stylesheet" href = "style_Lesson2_Exercise1.css">
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+        function App() {
+            return (
+                <div className="centre">
+                    <h1>Hello, welcome to my website</h1>
+                    <p>This is a simple React application.</p>
+                    <img src="robot.png" alt="welcome" width="100" CLASS="center" />
+                </div>
+                );
+        }
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render(<App />);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+.centre {
+        display: flex;
+        justify-content: center;     /* horizontal centering */
+        align-items: center;         /* vertical centering */
+        text-align: center;          /* center text inside elements */
+        height: 100vh;               /* full viewport height */
+        flex-direction: column;      /* stack items vertically */
+}
