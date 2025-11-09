@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>React Basics</title>
-    <link rel = "stylesheet" href = "style_Lesson2_Exercise1.css">
+    <link rel="stylesheet" href="style_Lesson2_Exercise1.css" />
   </head>
   <body>
     <div class="js-container"></div>
@@ -12,53 +12,63 @@
 
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
     <script type="text/babel">
+      function ProductDetails({ product, price, discountPrice }) {
+        return (
+          <div>
+            <p>{product}</p>
+            {/* <p>{price}</p> */}
+            <p>
+              {discountPrice > 0
+                ? `Discount Price: $${discountPrice}`
+                : `Price: $${price}`}
+            </p>
+          </div>
+        );
+      }
 
-        function ProductDetails ({product, price}) {
-            return (
-                <div>
-                    <p>{product}</p>
-                    <p>{price}</p>
+      function App() {
+        return (
+          <div className="centre">
+            <h1>Hello, welcome to my website</h1>
+            <div className="product-list">
+              <div className="product-card">
+                {<ProductDetails product="Cotton Socks" price="10.99" />}
+                <div className="button-group">
+                  <button> Add To Cart </button>
                 </div>
-            )
-        }
+              </div>
 
-        function App() {
-            return (
-                <div className="centre">
-                    <h1>Hello, welcome to my website</h1>
-                        <div className="product-list">
-                                <div className="product-card">
-                                    { <ProductDetails product="Cotton Socks" price="$10.99" /> }
-                                        <div className="button-group">
-                                                <button> Add To Cart </button> 
-                                        </div>
-                                </div>
-
-                                <div className="product-card">
-                                    { <ProductDetails product="Tennis Balls" price="$6.01" />}
-                                <div className="button-group">
-                                        <button> Add To Cart </button> 
-                                    </div>
-                                </div>
-
-                                <div className="product-card">
-                                    { <ProductDetails product="Plain Tee Shirt" price="$4.44" />}
-                                <div className="button-group">
-                                        <button> Add To Cart </button> 
-                                    </div>
-                                </div>
-                            { /*<p>product="Cotton Socks"</p> */ }
-                            { /*<p>price="$10.99"</p> */ }
-                            { /*    <div className="button-group"> */}
-                            {/*        <button> Add To Cart </button> */}
-                               {/* </div>*/}
-                    </div>
-                    <br />
-                    <img src="robot.png" alt="welcome" width="100" className="center" />
+              <div className="product-card">
+                {
+                  <ProductDetails
+                    product="Tennis Balls"
+                    price="6.01"
+                    discountPrice="5.45"
+                  />
+                }
+                <div className="button-group">
+                  <button> Add To Cart </button>
                 </div>
-                );
-        }
-      const container = document.querySelector('.js-container');
+              </div>
+
+              <div className="product-card">
+                {<ProductDetails product="Plain Tee Shirt" price="4.44" />}
+                <div className="button-group">
+                  <button> Add To Cart </button>
+                </div>
+              </div>
+              {/*<p>product="Cotton Socks"</p> */}
+              {/*<p>price="$10.99"</p> */}
+              {/*    <div className="button-group"> */}
+              {/*        <button> Add To Cart </button> */}
+              {/* </div>*/}
+            </div>
+            <br />
+            <img src="robot.png" alt="welcome" width="100" className="center" />
+          </div>
+        );
+      }
+      const container = document.querySelector(".js-container");
       ReactDOM.createRoot(container).render(<App />);
     </script>
   </body>
