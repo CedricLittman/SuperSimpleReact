@@ -7,9 +7,28 @@
         flex-direction: column;      /* stack items vertically */
 }
 
+/*
 .button-group {
     display: flex;
-    display-direction: row;
-    gap: 10px;                   /* space between buttons */
+    flex-direction: column;
+    gap: 10px;                   
     margin-bottom: 20px;
+}
+*/
+
+.product-list {
+  display: flex;
+  flex-direction: row;
+  gap: 20px; /* space between products */
+  justify-content: center; /* optional: center them horizontally */
+}
+
+.product-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: firebrick
 }
