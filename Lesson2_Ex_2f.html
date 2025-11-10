@@ -12,9 +12,10 @@
 
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
     <script type="text/babel">
-      function ProductDetails({ product, price, discountPrice }) {
+      function ProductDetails({ product, price, discountPrice, imageSrc }) {
         return (
           <div>
+            <img src={imageSrc} alt={product} width="100" />
             <p>{product}</p>
             {/* <p>{price}</p> */}
             <p>
@@ -32,7 +33,13 @@
             <h1>Hello, welcome to my website</h1>
             <div className="product-list">
               <div className="product-card">
-                {<ProductDetails product="Cotton Socks" price="10.99" />}
+                {
+                  <ProductDetails
+                    product="Cotton Socks"
+                    price="10.99"
+                    imageSrc="cotton-socks.png"
+                  />
+                }
                 <div className="button-group">
                   <button> Add To Cart </button>
                 </div>
@@ -44,6 +51,7 @@
                     product="Tennis Balls"
                     price="6.01"
                     discountPrice="5.45"
+                    imageSrc="tennis-balls.png"
                   />
                 }
                 <div className="button-group">
@@ -52,7 +60,13 @@
               </div>
 
               <div className="product-card">
-                {<ProductDetails product="Plain Tee Shirt" price="4.44" />}
+                {
+                  <ProductDetails
+                    product="Plain Tee Shirt"
+                    price="4.44"
+                    imageSrc="plain-t-shirt.png"
+                  />
+                }
                 <div className="button-group">
                   <button> Add To Cart </button>
                 </div>
