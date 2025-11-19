@@ -21,7 +21,7 @@
         return (
           <div>
             <button onClick={() => setClicks(clicks + 1)}>
-              Clicked {clicks} times
+              Clicked {clicks} {clicks < 2 ? "time" : "times"}
             </button>
           </div>
         );
