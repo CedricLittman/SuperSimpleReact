@@ -13,14 +13,29 @@
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
 
     <script type="text/babel">
+      function App() {
+        const [clicks, setClicks] = React.useState(0);
+        /* function clicked() {
+          console.log("Button was clicked");
+        } */
+        return (
+          <div>
+            <button onClick={() => setClicks(clicks + 1)}>
+              Clicked {clicks} times
+            </button>
+          </div>
+        );
+      }
       const container = document.querySelector(".js-container");
-      const output = (
-        <div>
-          <button> Clicked 0 times </button>
-        </div>
-      );
+      //   const output = (
+      //     <div>
+      //       <button onClick={() => setClicks(clicks + 1)}>
+      //         Clicked {clicks} times
+      //       </button>
+      //     </div>
+      //   );
 
-      ReactDOM.createRoot(container).render(output);
+      ReactDOM.createRoot(container).render(<App />);
     </script>
   </body>
 </html>
