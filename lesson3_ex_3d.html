@@ -16,11 +16,16 @@
       function Counter() {
         const [clicks, setClicks] = React.useState(0);
 
+        const resetClicks = () => {
+          setClicks(0);
+        };
+
         return (
           <div>
             <button onClick={() => setClicks(clicks + 1)}>
               Clicked {clicks} {clicks < 2 ? "time" : "times"}
             </button>
+            <button onClick={resetClicks}> Reset </button>
           </div>
         );
       }
